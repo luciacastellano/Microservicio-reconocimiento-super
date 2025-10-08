@@ -1,0 +1,10 @@
+# Ignorar entorno virtual
+venv/
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
+
+# Ignorar archivos del sistema
+.DS_Store
+best.pt
