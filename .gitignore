@@ -4,7 +4,25 @@ venv/
 # Ignorar archivos compilados de Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+*.pkl
 
 # Ignorar archivos del sistema
 .DS_Store
+Thumbs.db
+
+# Modelos grandes o binarios 
 best.pt
+
+# Configuración locales
+.labelImgSettings.pkl
+.lesshst
+.gitconfig
+arduino-cli.yaml
+pluggable-monitor-settings.json
+
+# IDEs y herramientas
+.vscode/
+.idea/
+node_modules/

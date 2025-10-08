@@ -1,14 +1,20 @@
+# Librerias estandar
+import io
+import os
+from collections import Counter
+from contextlib import asynccontextmanager
+
+# Librerias de terceros
+import requests
+import gdown
+import numpy as np
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import JSONResponse
 from ultralytics import YOLO
 from PIL import Image
-import io
-import os
-import numpy as np
-import requests
-from collections import Counter
-import gdown
-from contextlib import asynccontextmanager
+
+
+
 
 MODEL_PATH = "best.pt"
 DRIVE_ID = "1XN7JJxfl4TKy7kp0QMM1NB3j0-zom01h"  # ID de Google Drive
@@ -24,12 +30,12 @@ async def lifespan(app: FastAPI):
     # Cargar el modelo y guardarlo en app.state
     app.state.model = YOLO(MODEL_PATH)
     
-    yield  # la app ya está lista para recibir requests
+    yield  # La app ya está lista para recibir requests
     
     # Código opcional al cerrar la app (shutdown)
     print("Microservicio cerrado.")
 
-app = FastAPI(title="Microservicio YOLO",lifespan=lifespan)
+app = FastAPI(title="Microservicio YOLO", lifespan=lifespan)
 
 @app.get("/")
 def home():
