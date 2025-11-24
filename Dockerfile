@@ -22,7 +22,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Exponer el puerto
-EXPOSE 8080
+#EXPOSE 8080
+EXPOSE 5000
 
 # Comando para ejecutar la aplicación
-CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port ${PORT:-8080}"]
+#CMD ["sh", "-c", "uvicorn app:app --host 0.0.0.0 --port ${PORT:-8080}"]
+CMD ["python", "app.py"]
