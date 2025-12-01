@@ -17,7 +17,9 @@ from PIL import Image
 
 
 MODEL_PATH = "best.pt"
-DRIVE_ID = "1XN7JJxfl4TKy7kp0QMM1NB3j0-zom01h"  # ID de Google Drive
+#DRIVE_ID = "1XN7JJxfl4TKy7kp0QMM1NB3j0-zom01h"  # ID de Google Drive best.pt viejo Entrenamiento 1
+DRIVE_ID = "1jDvp4nEAu-bJj5HC8mfLO4Dt6Y1Mf6uJ"  # ID de Google Drive Entrenamiento 2
+DRIVE_ID = "1aVzWb1NMmVUHfrd8PPTP1IwnEd_kg58g"  # ID de Google Drive 
 MODEL_URL = f"https://drive.google.com/uc?id={DRIVE_ID}"
 
 @asynccontextmanager
